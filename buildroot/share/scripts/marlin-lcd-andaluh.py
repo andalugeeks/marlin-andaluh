@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # vim: ts=4
 ###
@@ -9,7 +9,7 @@
 
 import re
 
-import andaluh # pip install andaluh
+import andaluh # $ pip install andaluh (andaluh-py>=0.2.0)
 
 LANG_ES_FILE='../../../Marlin/src/lcd/language/language_es.h'
 LANG_ES_AND_FILE='../../../Marlin/src/lcd/language/language_es_AND.h'
@@ -53,9 +53,9 @@ EXCEPTIONS = {
     u"Inter.": u"Inter.",
     u"Speed": u"Speed",
     u"fil.": u'fil.',
+    u"Poner BLTouch a 5V": u"Ponêh BLTouch a 5V",
     u"BLTouch": u"BLTouch",
     u"Cmd: Modo 5V": u"Cmd: Modo 5V",
-    u"Poner BLTouch a 5V": u"Ponêh BLTouch a 5V",
     u"Cmd: Modo Software": u"Cmd: Modo Software",
     u"TouchMI": u"TouchMI",
     u"Test": u"Test",
@@ -82,7 +82,7 @@ EXCEPTIONS = {
 }
 
 # Matches everything on quotes (translation strings)
-translate_re = re.compile(ur'\"(.*?)\"', flags=re.UNICODE)
+translate_re = re.compile('\"(.*?)\"', flags=re.UNICODE)
 
 def translate_es_and(es_file):
 
